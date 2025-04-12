@@ -1,0 +1,39 @@
+#######################################
+# Syntax Coloring Map For FunctionalCPP
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1 - Orange)
+#######################################
+Maybe	  KEYWORD1
+Either	KEYWORD1
+IO	    KEYWORD1
+Async	  KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2 - Brown)
+#######################################
+# Either methods
+Right	  KEYWORD2
+Left	  KEYWORD2
+isRight	KEYWORD2
+isLeft	KEYWORD2
+unwrapRight	KEYWORD2
+unwrapLeft	KEYWORD2
+map	    KEYWORD2  # Used by multiple classes, list once is fine
+flatMap	KEYWORD2 # Used by multiple classes
+mapLeft	KEYWORD2
+match	  KEYWORD2
+fold	  KEYWORD2
+# IO methods/helpers
+run	KEYWORD2
+pure	KEYWORD2 # Used by multiple classes
+unit	KEYWORD2 # Used by multiple classes
+# Async methods/helpers
+runAsync KEYWORD2
+# FunctionalHelpers (Add your specific public helper function names)
+liftIO	KEYWORD2
+liftIOtoEither	KEYWORD2
+flatMapIOEither	KEYWORD2
+mapIOEither	    KEYWORD2
+mapLeftIOEither	KEYWORD2
