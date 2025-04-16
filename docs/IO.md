@@ -24,6 +24,8 @@ IO<void> logMessage(String msg) {
 }
 ```
 
+>Note: The lambda captures the `msg` variable by value, so it can be used inside the lambda function. Check basic FP principles earlier.
+
 Wrap WiFi connection handling:
 
 ```cpp

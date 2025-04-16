@@ -72,3 +72,14 @@ void loop() {
 - Each function only foucses on _one thing_
 - Easy to test in isolation
 - You can even log or inject debugging logic between steps
+
+## Implementation
+
+### Template Class API
+
+- **`Just` and `Nothing`**: Static methods to create instances of Maybe. `Just` wraps a value, and `Nothing` represents the absence of a value.
+- **Introspection**: Methods `isJunst()` and `isNothing` allow to ckeck if the `Maybe` contains a value or not.
+- **`map()`**: transforms the value inside the `Maybe` (if present) using a given function.
+- **`flatMap()`**: similar to map(), but the function passed in returns another `Maybe<T>` of same type `T`, allowing to chain computations that may file
+- **`match()`**: method for pattern matching, where both `Just` or ``Nothing` are handled.
+- **`fold()`**: similar to `match()`, but combines the results from both cases into a single value.

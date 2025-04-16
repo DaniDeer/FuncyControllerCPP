@@ -57,6 +57,14 @@ int offset = 10;
 auto addOffset = [offset](int x) { return x + offset; };
 ```
 
+- **Lambda Capture**: You can capture variables from the surrounding scope. 
+  - `[=]` captures all by value
+  - `[&]` captures all by reference
+  - `[x]` captures `x` by value
+  - `[&x]` captures `x` by reference
+
+> Note: Later in more advanced FP patterns, you can use this captures in Lambdas in `map()`, `flatMap()`, `match()` and `fold()` etc.
+
 See more examples in next section _Higher-Order Functions_.
 
 ## 4. Higher-Order Functions
@@ -231,8 +239,7 @@ void loop() {
 
 ## 8. Lazy Evaluation (simulated via closures or deferred execution)
 
-C++ doesn’t support true lazy evaluation, but you can simulate it.
-This helps when you want to define a pipeline or conditional read.
+C++ doesn’t support true lazy evaluation, but you can simulate it by using lambdas or generators. This helps when you want to define a pipeline or conditional read.
 
 ```cpp
 std::function<int()> lazySensorRead = []() {
@@ -352,3 +359,11 @@ void loop() {
 ```
 
 You now have a pure functional state machine—easy to reason about, test, and extend.
+
+## 11. Monads (Maybe, Either)
+
+See advanced section for details.
+
+## 12. IO Monad / Effect System
+
+See advanced section for details.

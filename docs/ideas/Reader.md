@@ -4,7 +4,7 @@ The Reader pattern is used to model computations that depend on an external envi
 
 ## Use Cases
 
-Imagine a scenario where you need to access configuration data (like database settings or user credentials) in various parts of your application.
+Access configuration data (like database settings or user credentials) in various parts of your application.
 
 ## Class template ideation
 

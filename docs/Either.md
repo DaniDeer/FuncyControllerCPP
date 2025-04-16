@@ -105,3 +105,15 @@ Now you can return `Result<int>`, `Result<float>`, etc., without repeating `Eith
 | “Nothing” is a valid and expected outcome     | Errors are exceptional and meaningful                       |
 | You want to avoid boilerplate or error typing | You’re composing complex pipelines with many failure points |
 | _"this didn't work, move on"_                 | _"this didn´t work, hold on and here is why"_               |
+
+## Implementation
+
+### Template Class API
+
+- **`Left` and `Right`**: Static methods to create instances of Either. `Left` wraps an error, and `Right` wraps a successful value.
+- **Introspection**: Methods `isLeft()` and `isRight()` allow to check if the Either contains a value or not.
+- **`map()`**: transforms the value inside the Either (if present) using a given function.
+- **`flatMap()`**: similar to map(), but the function passed in returns another `Either<T, E>` of same type `T`, allowing to chain computations that may fail
+- **`mapLeft()`**: transforms the error value inside the Either (if present) using a given function.
+- **`match()`**: method for pattern matching, where both `Left` or `Right` are handled.
+- **`fold()`**: similar to `match()`, but combines the results from both cases into a single value.
